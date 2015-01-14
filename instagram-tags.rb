@@ -27,7 +27,7 @@ class InstagramTags
 	  file.write("div.main div{display:inline-block;padding:3px}img{width:500px;height:500px}")
 	  file.write("</style></head><body>")
 
-	  file.write("<div class=\"main\">")
+	  file.write("<div class=\"main\">\n")
 
 	  contents.each do |item|
 	    file.write(format_content(item))
@@ -75,8 +75,11 @@ class InstagramTags
 	end
 
 	def format_content(item)
-	  "<div><a href=\"#{item.link}\" title=\"#{item.caption.nil? ? '' : item.caption.text}\">" <<
-	  "<img src=\"#{item.images.standard_resolution.url}\" /></a></div>"
+		caption = item.caption.nil? ? '' : item.caption.text
+		caption.gsub!("\"", "'")
+		caption.gsub!("\n", " ")
+	  "<div><a href=\"#{item.link}\" title=\"#{caption}\">" <<
+	  "<img src=\"#{item.images.standard_resolution.url}\" /></a></div>\n"
 	end
 
 end
