@@ -1,6 +1,6 @@
 # Instagram-Tags
 
-Browse latest instagram photos by tags. Grags N photos matching any of the specified tags and creates a simple HTML file
+Browse latest instagram photos by tags. Grabs N photos matching any of the specified tags and creates a simple HTML file
 listing them (with links to original items).
 
 ## Getting Started

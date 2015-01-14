@@ -5,7 +5,6 @@ require 'instagram'
 
 class InstagramTags
 
-	# TODO: Inject config instead of global vars
 	def initialize(config)
 		@config = { items_per_call: 33, items_to_keep: 60 }.merge(config)
 		@client = Instagram.client(access_token: @config[:access_token])
