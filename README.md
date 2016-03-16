@@ -5,7 +5,7 @@ listing them (with links to original items).
 
 ## Getting Started
 
-Just copy `config.sample.rb` to `config.rb`, fill your Client & token details (sorry, no oauth process coded,
+Just copy `config.sample.rb` to `config.rb`, fill your oauth access token details (sorry, no oauth process coded,
 must manually do before), and edit `main.rb` to setup your tags.
 
 ## Roadmap
