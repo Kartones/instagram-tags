@@ -33,7 +33,7 @@ class InstagramTags
 	    file.write(format_content(item))
 	  end
 
-	  file.write("</div><div>Distinct Items: #{contents.length}</div></body></html>")
+	  file.write("</div><p>Tags: #{tag_ids.map{|tag| "##{tag}" }.join(' ')}</p><p>Distinct Items: #{contents.length}</p></body></html>")
 	  file.close
 
 	  `start #{filename}`
